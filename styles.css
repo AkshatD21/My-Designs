@@ -25,10 +25,11 @@ body {
   height: 2px;
   background-color: rgb(42, 201, 164);
 }
+
 #imageContainer {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 20px; 
+  gap: 20px;
 }
 
 .card {
@@ -50,4 +51,28 @@ img {
   height: 100%;
   object-fit: cover;
   border-radius: 8px;
+}
+
+@media screen and (max-width: 1200px) {
+  #imageContainer {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (max-width: 960px) {
+  #imageContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #imageContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #imageContainer {
+    grid-template-columns: 1fr;
+  }
 }
